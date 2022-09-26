@@ -41,7 +41,8 @@ function updateUI(location, forecast) {
   const cityName = location.LocalizedName;
   const condition = forecast.WeatherText;
   const temperature = forecast.Temperature.Imperial.Value;
+  const tempUnit = forecast.Temperature.Imperial.Unit;
   document.getElementById("name").innerText = `${cityName}`;
   document.getElementById("condition").innerText = condition;
-  document.getElementById("temperature").innerText = `${temperature} F`;
+  document.getElementById("temperature").innerText = `${temperature} °${tempUnit}`;
 }
